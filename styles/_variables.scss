@@ -1,0 +1,76 @@
+$open_sans: 'Open Sans Regular';
+$gotham: 'Gotham Pro Black';
+$lato: 'Lato Regular';
+$lato_bold: 'Lato Bold';
+$lato_light: 'Lato Light';
+
+$brand_orange_color: #ffbb42;
+$brand_light_orange_color: #ffc155;
+
+$brand_blue_color: #709dca;
+
+$button_border_color: #e7ad48;
+$icon_color: $brand_blue_color;
+$icon_hover_color: #F6772C;
+$heading_color: #394b50;
+
+
+$section_plans_color: #e7edf3;
+$plan_main_color: #818b95;
+$description_border_color: #e2e9f0;
+$description_text_color: #b5bbc1;
+$primary_description_text_color: #c2e1ff;
+$primary_description_border_color: #8eb8e2;
+
+@mixin svg_icon($fill: null, $width: null, $height: null) {
+    .icon {
+        @if $fill {
+            fill: $fill;
+        }
+
+        @if $width {
+            width: $width;
+        }
+
+        @if $height {
+            height: $height;
+        }
+
+        @content;
+    }
+}
+
+@function vw($size) {
+    $test_screen_client_height: 1903;
+
+    @return ($size / $test_screen_client_height) * 100vw;
+}
+
+@mixin scale($width, $diff: 'less') {
+    $behaviour: max-width;
+    $screen-width: $width;
+
+    @if ($diff == 'less') {
+        $screen-width: $width - 1px;
+    }
+    @if ($diff == 'self-above') {
+        $behaviour: min-width;
+    }
+
+    @media screen and (#{$behaviour}: $screen-width) {
+        @content;
+    }
+}
+
+$input_icon_size: 41px;
+$input_line_height: 1;
+$input_font_size: 10px;
+$input_padding: 18px;
+
+$slider_arrows_size: 25px;
+$slider_arrows_x_space: 40;
+$slider_arrows_bottom: 190;
+$slider_dots_active_color: #1ca8dd;
+$slider_dots_color: #dedfe0;
+
+$about_image_size: 50%;
