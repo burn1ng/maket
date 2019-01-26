@@ -1,0 +1,40 @@
+section.main-screen
+    .main-screen__content.container
+        .main-screen__heading
+            .section-heading.section-heading_light
+                .section-heading__main Boost up your Local business
+                .section-heading__secondary
+                    | Lorem Ipsum is simply dummy text of the printing and
+                    | typesetting industry. Lorem Ipsum typesetting
+        .main-screen__form
+            form.form(action='#', method='post')
+                .form__row
+                    .form__item.input
+                        input.input__field(type='text', placeholder='Full Name')
+                        svg.input__icon.icon
+                            use(xlink:href='svg/defs.svg#user')
+                    .form__item.input
+                        input.input__field(type='email', placeholder='Email Address')
+                        svg.input__icon.icon
+                            use(xlink:href='svg/defs.svg#email')
+                .form__row
+                    .form__item.input
+                        input.input__field(type='tel', placeholder='Phone Number')
+                        svg.input__icon.icon
+                            use(xlink:href='svg/defs.svg#phone')
+                    .form__item.input
+                        input.input__field.input__field_submit(type='submit', value='Request a Quote')
+        .main-screen__slider
+            .slider
+                .slider__screen
+                    img.slider__image(src='./img/mac_img_1.jpg', alt='slide 1 image')
+                    a.slider__direction.slider__direction_left(href='#')
+                        svg.slider__direction-icon.icon
+                            use(xlink:href='svg/defs.svg#arrow-left')
+                    a.slider__direction.slider__direction_right(href='#')
+                        svg.slider__direction-icon.icon
+                            use(xlink:href='svg/defs.svg#arrow-right')
+                .slider__controls
+                    .slider__control.slider__control_active
+                    .slider__control
+                    .slider__control
