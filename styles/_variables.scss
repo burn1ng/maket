@@ -22,26 +22,15 @@ $description_text_color: #b5bbc1;
 $primary_description_text_color: #c2e1ff;
 $primary_description_border_color: #8eb8e2;
 
-@mixin svg_icon($fill: null, $width: null, $height: null) {
-    .icon {
-        @if $fill {
-            fill: $fill;
-        }
+$transition_style: 0.2s ease-in-out;
+$transition_style_long: 1s ease-in-out;
 
-        @if $width {
-            width: $width;
-        }
-
-        @if $height {
-            height: $height;
-        }
-
-        @content;
-    }
-}
+$testimoial_text_color: #7b7b7b;
+$testimonial_author_color: $icon_hover_color;
+$testimonials_position_color: $heading_color;
 
 @function vw($size) {
-    $test_screen_client_height: 1903;
+    $test_screen_client_height: 1366;
 
     @return ($size / $test_screen_client_height) * 100vw;
 }
@@ -51,13 +40,13 @@ $primary_description_border_color: #8eb8e2;
     $screen-width: $width;
 
     @if ($diff == 'less') {
-        $screen-width: $width - 1px;
+        $screen-width: $width - 1;
     }
     @if ($diff == 'self-above') {
         $behaviour: min-width;
     }
 
-    @media screen and (#{$behaviour}: $screen-width) {
+    @media screen and (#{$behaviour}: #{$screen-width}px) {
         @content;
     }
 }
@@ -66,6 +55,7 @@ $input_icon_size: 41px;
 $input_line_height: 1;
 $input_font_size: 10px;
 $input_padding: 18px;
+$input_border_color: #cbcbcb;
 
 $slider_arrows_size: 25px;
 $slider_arrows_x_space: 40;
@@ -74,3 +64,7 @@ $slider_dots_active_color: #1ca8dd;
 $slider_dots_color: #dedfe0;
 
 $about_image_size: 50%;
+$baloon_background_color:#394b50;
+$baloon_address_color: #aeb7ba;
+
+$bottom_nav_border_color: #e3e7ec;

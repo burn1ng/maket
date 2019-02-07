@@ -1,4 +1,4 @@
-extends ./../partials/layout.pug 
+extends ./../partials/layout.pug
 
 block page_title
     title Business template
@@ -8,3 +8,160 @@ block content
     include ./../partials/section_services.pug
     include ./../partials/section_about.pug
     include ./../partials/section_plans.pug
+    
+    <section class="how-to">
+        <div class="how-to__content container">
+            <div class="how-to__heading section-heading">
+                <div class="section-heading__main">How it works</div>
+                <div class="section-heading__secondary">Lorem Ipsum is simply dummy Business industry</div>
+            </div>
+            <div class="how-to__steps">
+                <article class="how-to__step step">
+                    <div class="step__icon-wrapper">
+                        <svg class="step__icon icon icon_lg">
+                            <use xlink:href="svg/defs.svg#headphones"></use>
+                        </svg>
+                    </div>
+                    <div class="step__name">Step 1</div>
+                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
+                </article>
+                <article class="how-to__step step">
+                    <div class="step__icon-wrapper">
+                        <svg class="step__icon icon icon_lg">
+                            <use xlink:href="svg/defs.svg#unlock"></use>
+                        </svg>
+                    </div>
+                    <div class="step__name">Step 2</div>
+                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
+                </article>
+                <article class="how-to__step step">
+                    <div class="step__icon-wrapper">
+                        <svg class="step__icon icon icon_lg">
+                            <use xlink:href="svg/defs.svg#cloud-up"></use>
+                        </svg>
+                    </div>
+                    <div class="step__name">Step 3</div>
+                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
+                </article>
+                <article class="how-to__step step">
+                    <div class="step__icon-wrapper">
+                        <svg class="step__icon icon icon_lg">
+                            <use xlink:href="svg/defs.svg#thumbs-up"></use>
+                        </svg>
+                    </div>
+                    <div class="step__name">Step 4</div>
+                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
+                </article>
+            </div>
+            <a class="how-to__button button">Get start now</a>
+        </div>
+    </section>
+
+    section.testimonials
+        .testimonials__content.container
+            .testimonials__heading.section-heading.section-heading_light
+                .section-heading__main Happy Clients
+                .section-heading__secondary We are explain who is using our business solutions
+            .testimonials__wrapper
+                .testimonials__item.testimonial
+                    .testimonial__avatar
+                        img(src="./../../img/photo1.png", alt="Darwin Michle photo")
+                    .testimonial__content
+                        .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.
+                        .testimomial__info
+                            .testimonial__author Darwin Michle
+                            .testimonial__position Project manager
+                .testimonials__item.testimonial
+                    .testimonial__avatar
+                        img(src="./../../img/photo2.png", alt="Madam Elisabath photo")
+                    .testimonial__content
+                        .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, wen an unknown printer took a galley of type and scrambled to make a type specimen book. , but also the leap into electronic typesetting, remaining essentially unchanged.
+                        .testimomial__info
+                            .testimonial__author Madam Elisabath
+                            .testimonial__position Creative Director
+                .testimonials__item.testimonial
+                    .testimonial__avatar
+                        img(src="./../../img/photo3.png", alt="Darwin Michle photo")
+                    .testimonial__content
+                        .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. a type specimen book. , but also the leap into electronic typesetting, remaining essentially unchanged.
+                        .testimomial__info
+                            .testimonial__author Clips Arter
+                            .testimonial__position Lipsum directer
+                .testimonials__item.testimonial
+                    .testimonial__avatar
+                        img(src="./../../img/photo4.png", alt="Madam Elisabath photo")
+                    .testimonial__content
+                        .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, wen an unknown printer took a galley of type and scrambled to make a type specimen book.
+                        .testimomial__info
+                            .testimonial__author Zam Cristafr
+                            .testimonial__position Manager
+    
+    section.contacts
+        .contacts__content.container
+            .contacts__heading.section-heading
+                .section-heading__main Newsletter
+                .section-heading__secondary Lorem Ipsum is simply dummy Business industry
+            form.contacts__form.form(action='#' method='post')
+                .form__item.input.input_bordered
+                    input.input__field(type='text' placeholder='Full Name')
+                    svg.input__icon.icon
+                        use(xlink:href='svg/defs.svg#user')
+                .form__item.form__item_greedy.input.input_bordered
+                    input.input__field(type='email' placeholder='Email Address')
+                    svg.input__icon.icon
+                        use(xlink:href='svg/defs.svg#email')
+                .form__item.form__item_centered.input
+                    input.input__field.input__field_submit(type='submit' value='Subscribe now')
+            .contacts__map
+                .contacts__baloon.baloon
+                    .baloon__content
+                        .baloon__heading Address
+                        .baloon__text
+                            | Business street
+                            br
+                            | Second north section
+                            br
+                            | Bavani nagar. 88769
+                            br
+                            | Call : +987-9976-999
+                            br
+                            span.baloon__email info@businessface.com
+                .contacts__logo.logo
+            .contacts__bottom-nav
+                ul.contacts__menu.nav-menu.nav-menu_light
+                    li.nav-menu__item
+                        a.nav-menu__link(href='/') Home
+                    li.nav-menu__item
+                        a.nav-menu__link(href='#') Service
+                    li.nav-menu__item
+                        a.nav-menu__link(href='/about.html') About us
+                    li.nav-menu__item
+                        a.nav-menu__link(href='/plans.html') Pricing Table
+                    li.nav-menu__item
+                        a.nav-menu__link(href='#') How it works
+                    li.nav-menu__item
+                        a.nav-menu__link(href='#') Happy clients
+                    li.nav-menu__item
+                        a.nav-menu__link(href='#') Contact us
+                .contacts__tel
+                    svg.icon
+                        use(xlink:href='svg/defs.svg#phone')
+                    span.contacts__tel-number +987 9976 999
+                .contacts__social
+                    a.contacts__social-item(href="#")
+                        svg.contacts__social-icon.icon
+                            use(xlink:href='svg/defs.svg#twitter')
+                    a.contacts__social-item(href="#")
+                        svg.contacts__social-icon.icon
+                            use(xlink:href='svg/defs.svg#facebook')
+                    a.contacts__social-item(href="#")
+                        svg.contacts__social-icon.icon
+                            use(xlink:href='svg/defs.svg#google-plus')
+                    a.contacts__social-item(href="#")
+                        svg.contacts__social-icon.icon
+                            use(xlink:href='svg/defs.svg#linkedin')
+    section.footer
+        .footer__content.container
+            .footer__copyright All contents © copyright 2014 Business Theme. All rights reserved Designed by : akhilwebfolio
+
+
