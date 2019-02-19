@@ -9,53 +9,39 @@ block content
     include ./../partials/section_about.pug
     include ./../partials/section_plans.pug
     
-    <section class="how-to">
-        <div class="how-to__content container">
-            <div class="how-to__heading section-heading">
-                <div class="section-heading__main">How it works</div>
-                <div class="section-heading__secondary">Lorem Ipsum is simply dummy Business industry</div>
-            </div>
-            <div class="how-to__steps">
-                <article class="how-to__step step">
-                    <div class="step__icon-wrapper">
-                        <svg class="step__icon icon icon_lg">
-                            <use xlink:href="svg/defs.svg#headphones"></use>
-                        </svg>
-                    </div>
-                    <div class="step__name">Step 1</div>
-                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
+    .how-to
+        .how-to__content.container
+            .how-to__heading.section-heading
+                .section-heading__main How it works
+                .section-heading__secondary Lorem Ipsum is simply dummy Business industry
+            
+            .how-to__steps
+                article.how-to__step.step
+                    .step__icon-wrapper
+                        svg.step__icon.icon.icon_lg
+                            use(xlink:href='svg/defs.svg#headphones')
+                    .step__name Step 1
+                    .step__info Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been
+                article.how-to__step.step
+                    .step__icon-wrapper
+                        svg.step__icon.icon.icon_lg
+                            use(xlink:href='svg/defs.svg#unlock')
+                    .step__name Step 2
+                    .step__info Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been
                 </article>
-                <article class="how-to__step step">
-                    <div class="step__icon-wrapper">
-                        <svg class="step__icon icon icon_lg">
-                            <use xlink:href="svg/defs.svg#unlock"></use>
-                        </svg>
-                    </div>
-                    <div class="step__name">Step 2</div>
-                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
-                </article>
-                <article class="how-to__step step">
-                    <div class="step__icon-wrapper">
-                        <svg class="step__icon icon icon_lg">
-                            <use xlink:href="svg/defs.svg#cloud-up"></use>
-                        </svg>
-                    </div>
-                    <div class="step__name">Step 3</div>
-                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
-                </article>
-                <article class="how-to__step step">
-                    <div class="step__icon-wrapper">
-                        <svg class="step__icon icon icon_lg">
-                            <use xlink:href="svg/defs.svg#thumbs-up"></use>
-                        </svg>
-                    </div>
-                    <div class="step__name">Step 4</div>
-                    <div class="step__info">Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been</div>
-                </article>
-            </div>
-            <a class="how-to__button button">Get start now</a>
-        </div>
-    </section>
+                article.how-to__step.step
+                    .step__icon-wrapper
+                        svg.step__icon.icon.icon_lg
+                            use(xlink:href='svg/defs.svg#cloud-up')
+                    .step__name Step 3
+                    .step__info Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been
+                article.how-to__step.step
+                    .step__icon-wrapper
+                        svg.step__icon.icon.icon_lg
+                            use(xlink:href='svg/defs.svg#thumbs-up')
+                    .step__name Step 4
+                    .step__info Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry. Lorem Ipsum has been
+            .how-to__button.button Get start now
 
     section.testimonials
         .testimonials__content.container
@@ -65,7 +51,7 @@ block content
             .testimonials__wrapper
                 .testimonials__item.testimonial
                     .testimonial__avatar
-                        img(src="./../../img/photo1.png", alt="Darwin Michle photo")
+                        img(src="./../../img/photo_1.png", alt="Darwin Michle photo")
                     .testimonial__content
                         .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.
                         .testimomial__info
@@ -73,7 +59,7 @@ block content
                             .testimonial__position Project manager
                 .testimonials__item.testimonial
                     .testimonial__avatar
-                        img(src="./../../img/photo2.png", alt="Madam Elisabath photo")
+                        img(src="./../../img/photo_2.png", alt="Madam Elisabath photo")
                     .testimonial__content
                         .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, wen an unknown printer took a galley of type and scrambled to make a type specimen book. , but also the leap into electronic typesetting, remaining essentially unchanged.
                         .testimomial__info
@@ -81,7 +67,7 @@ block content
                             .testimonial__position Creative Director
                 .testimonials__item.testimonial
                     .testimonial__avatar
-                        img(src="./../../img/photo3.png", alt="Darwin Michle photo")
+                        img(src="./../../img/photo_3.png", alt="Darwin Michle photo")
                     .testimonial__content
                         .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. a type specimen book. , but also the leap into electronic typesetting, remaining essentially unchanged.
                         .testimomial__info
@@ -89,7 +75,7 @@ block content
                             .testimonial__position Lipsum directer
                 .testimonials__item.testimonial
                     .testimonial__avatar
-                        img(src="./../../img/photo4.png", alt="Madam Elisabath photo")
+                        img(src="./../../img/photo_4.png", alt="Madam Elisabath photo")
                     .testimonial__content
                         .testimonial__comment Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrystandard dummy text ever since the 1500s, wen an unknown printer took a galley of type and scrambled to make a type specimen book.
                         .testimomial__info
@@ -143,10 +129,12 @@ block content
                         a.nav-menu__link(href='#') Happy clients
                     li.nav-menu__item
                         a.nav-menu__link(href='#') Contact us
+
                 .contacts__tel
                     svg.icon
                         use(xlink:href='svg/defs.svg#phone')
                     span.contacts__tel-number +987 9976 999
+
                 .contacts__social
                     a.contacts__social-item(href="#")
                         svg.contacts__social-icon.icon
